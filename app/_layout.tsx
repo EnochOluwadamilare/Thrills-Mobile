@@ -25,9 +25,16 @@ export default function RootLayout() {
   const navigationTheme = theme === 'dark' ? DarkTheme : DefaultTheme;
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
+    async function prepareApp() {
+      // Simulate a longer splash screen display time (e.g., 3 seconds)
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+  
+      if (loaded) {
+        SplashScreen.hideAsync();
+      }
     }
+  
+    prepareApp();
   }, [loaded]);
 
   if (!loaded) {

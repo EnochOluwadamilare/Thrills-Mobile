@@ -30,7 +30,7 @@
           "image": "./assets/images/splash.svg",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#FEF9B0"
         }
       ]
     ],
